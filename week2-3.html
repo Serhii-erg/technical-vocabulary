@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Неделя 2-3: Латинские корни</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Неделя 2-3: Латинские корни</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="modules.html">Модули курса</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Флэш-карточки</h2>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="front">Octo-</div>
+            <div class="back">Восемь</div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="front">Tractus</div>
+            <div class="back">Тракт, канал, путь</div>
+        </div>
+
+        <h2>Викторина</h2>
+        <form id="quizForm" onsubmit="checkAnswers(event)">
+            <label>Что означает "Novus"?</label>
+            <input type="text" name="q1">
+            <div id="feedback1"></div>
+
+            <label>Что означает "Jur"?</label>
+            <input type="text" name="q2">
+            <div id="feedback2"></div>
+
+            <button type="submit">Отправить</button>
+        </form>
+
+        <h2>Игра на соответствие</h2>
+        <div class="match-game">
+            <div class="term" draggable="true" ondragstart="drag(event)">Mono</div>
+            <div class="definition" ondrop="drop(event)" ondragover="allowDrop(event)">Один</div>
+        </div>
+        <div class="match-game">
+            <div class="term" draggable="true" ondragstart="drag(event)">Bi</div>
+            <div class="definition" ondrop="drop(event)" ondragover="allowDrop(event)">Два</div>
+        </div>
+    </main>
+</body>
+</html>
